@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>GET</http_method>
+        <name>getideas</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+	
+	// implement resource here
+	var queryParams = request.queryParams;
+	var typeVal = queryParams.type;
+	var ideas = [];
+	
+	function getVotes(sys_id){
+		var voteObj = {};
+			var voteGr = new GlideRecord('x_snc_idea_portal_idea_votes');
+			voteGr.addQuery('idea',sys_id);
+			voteGr.addQuery('voted',true);
+			voteGr.query();
+			voteObj.count =  voteGr.getRowCount();
+			voteObj.voted = false;
+			while(voteGr.next()){
+				if(voteGr.name == gs.getUserID()){
+					voteObj.voted = true;
+				}
+			}
+			return voteObj;
+			
+		}
+		if(typeVal != 'myvotes'){
+			var ideaGr = new GlideRecord('idea');
+			ideaGr.addActiveQuery();
+			if(typeVal == 'all'){
+				ideaGr.addEncodedQuery('opened_byISNOTEMPTY');
+			}
+			if(typeVal == 'my'){
+				ideaGr.addQuery('opened_by',gs.getUserID());
+			}
+			ideaGr.query();
+			while(ideaGr.next()){
+				var temp = {};
+					temp.title = ideaGr.getDisplayValue('short_description');
+					temp.sys_id = ideaGr.getDisplayValue('sys_id');
+					temp.description = ideaGr.getDisplayValue('business_case');
+					temp.openedByName = ideaGr.getDisplayValue('opened_by');
+					temp.number = ideaGr.getDisplayValue('number');
+					temp.openedBySysid = ideaGr.getValue('opened_by');
+					temp.createdOnDate = ideaGr.getDisplayValue('sys_created_on');
+					var voteObj = getVotes(ideaGr.getValue('sys_id'));
+					temp.voteCount = voteObj.count;
+					temp.iVoted = voteObj.voted;
+					ideas.push(temp);
+				}
+			} else{
+				var voteGr = new GlideRecord('x_snc_idea_portal_idea_votes');
+				voteGr.addQuery('name',gs.getUserID());
+				voteGr.addQuery('voted',true);
+				voteGr.query();
+				while(voteGr.next()){
+					var ideaObj = {};
+					ideaObj.title = voteGr.idea.short_description.getDisplayValue();
+					ideaObj.sys_id = voteGr.idea.sys_id.getDisplayValue();
+					ideaObj.description = voteGr.idea.business_case.getDisplayValue();
+					ideaObj.openedByName = voteGr.idea.opened_by.getDisplayValue();
+					ideaObj.number = voteGr.idea.number.getDisplayValue();
+					ideaObj.openedBySysid = voteGr.idea.opened_by.toString();
+					ideaObj.createdOnDate = voteGr.idea.sys_created_on.getDisplayValue();
+					voteObject = getVotes(voteGr.idea.sys_id.toString());
+					ideaObj.voteCount = voteObject.count;
+					ideaObj.iVoted = voteObject.voted;
+					ideas.push(ideaObj);
+				}
+				
+			}
+			return ideas;
+			
+		})(request, response);]]></operation_script>
+        <operation_uri>/api/x_snc_idea_portal/ideas/getideas</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/getideas</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>sush.chan</sys_created_by>
+        <sys_created_on>2018-01-04 00:29:47</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>938c637fdb5fcb0094407f6bbf961913</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>getideas</sys_name>
+        <sys_package display_value="Idea Portal" source="x_snc_idea_portal">4da17b35db9fc70094407f6bbf961985</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Idea Portal">4da17b35db9fc70094407f6bbf961985</sys_scope>
+        <sys_update_name>sys_ws_operation_938c637fdb5fcb0094407f6bbf961913</sys_update_name>
+        <sys_updated_by>sush.chan</sys_updated_by>
+        <sys_updated_on>2018-01-04 00:29:47</sys_updated_on>
+        <web_service_definition display_value="Ideas">a85c2f3fdb5fcb0094407f6bbf9619cb</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+</record_update>

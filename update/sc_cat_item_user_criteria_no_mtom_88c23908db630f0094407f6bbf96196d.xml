@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sc_cat_item_user_criteria_no_mtom">
+    <sc_cat_item_user_criteria_no_mtom action="INSERT_OR_UPDATE">
+        <sc_cat_item display_value="Submit an idea">df823500dba30f0094407f6bbf961917</sc_cat_item>
+        <sys_class_name>sc_cat_item_user_criteria_no_mtom</sys_class_name>
+        <sys_created_by>sush.chan</sys_created_by>
+        <sys_created_on>2018-01-04 10:14:57</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>88c23908db630f0094407f6bbf96196d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Submit an idea.SNC External</sys_name>
+        <sys_package display_value="Idea Portal" source="x_snc_idea_portal">4da17b35db9fc70094407f6bbf961985</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Idea Portal">4da17b35db9fc70094407f6bbf961985</sys_scope>
+        <sys_update_name>sc_cat_item_user_criteria_no_mtom_88c23908db630f0094407f6bbf96196d</sys_update_name>
+        <sys_updated_by>sush.chan</sys_updated_by>
+        <sys_updated_on>2018-01-04 10:14:57</sys_updated_on>
+        <user_criteria display_value="SNC External">20bf20badb1d870094407f6bbf961923</user_criteria>
+    </sc_cat_item_user_criteria_no_mtom>
+</record_update>
