@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_theme">
+    <sp_theme action="INSERT_OR_UPDATE">
+        <css_variables/>
+        <footer/>
+        <footer_fixed>true</footer_fixed>
+        <header/>
+        <name>Idea Portal</name>
+        <navbar_fixed>true</navbar_fixed>
+        <sys_class_name>sp_theme</sys_class_name>
+        <sys_created_by>sush.chan</sys_created_by>
+        <sys_created_on>2018-01-10 19:16:41</sys_created_on>
+        <sys_id>8f286ec6dbe3034094407f6bbf9619de</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Idea Portal</sys_name>
+        <sys_package display_value="Idea Portal" source="x_snc_idea_portal">4da17b35db9fc70094407f6bbf961985</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Idea Portal">4da17b35db9fc70094407f6bbf961985</sys_scope>
+        <sys_update_name>sp_theme_8f286ec6dbe3034094407f6bbf9619de</sys_update_name>
+        <sys_updated_by>sush.chan</sys_updated_by>
+        <sys_updated_on>2018-01-10 19:16:41</sys_updated_on>
+    </sp_theme>
+</record_update>

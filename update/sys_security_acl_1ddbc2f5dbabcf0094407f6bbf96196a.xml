@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_security_acl">
+    <sys_security_acl action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <admin_overrides>true</admin_overrides>
+        <advanced>false</advanced>
+        <condition/>
+        <description>Default access control on x_snc_idea_portal_instance_of_banner</description>
+        <name>x_snc_idea_portal_instance_of_banner</name>
+        <operation display_value="write">write</operation>
+        <script/>
+        <sys_class_name>sys_security_acl</sys_class_name>
+        <sys_created_by>sush.chan</sys_created_by>
+        <sys_created_on>2018-01-09 22:33:55</sys_created_on>
+        <sys_id>1ddbc2f5dbabcf0094407f6bbf96196a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_snc_idea_portal_instance_of_banner</sys_name>
+        <sys_package display_value="Idea Portal" source="x_snc_idea_portal">4da17b35db9fc70094407f6bbf961985</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Idea Portal">4da17b35db9fc70094407f6bbf961985</sys_scope>
+        <sys_update_name>sys_security_acl_1ddbc2f5dbabcf0094407f6bbf96196a</sys_update_name>
+        <sys_updated_by>sush.chan</sys_updated_by>
+        <sys_updated_on>2018-01-09 22:33:55</sys_updated_on>
+        <type display_value="record">record</type>
+    </sys_security_acl>
+</record_update>
