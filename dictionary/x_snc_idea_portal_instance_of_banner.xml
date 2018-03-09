@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
-    <element attributes="update_synch=true" extends="sp_instance" label="Instance of banner" max_length="40" name="x_snc_idea_portal_instance_of_banner" type="collection">
+    <element attributes="update_synch=true" extends="sp_instance" label="Instance of Banner" max_length="40" name="x_snc_idea_portal_instance_of_banner" type="collection">
         <element choice="1" label="Align image" max_length="40" name="align_image" type="choice">
             <choice>
                 <element label="center" sequence="100" value="center"/>

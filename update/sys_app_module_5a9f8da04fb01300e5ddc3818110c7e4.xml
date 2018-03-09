@@ -14,29 +14,29 @@
         <map_page/>
         <mobile_title>Idea Votes</mobile_title>
         <mobile_view_name>Mobile</mobile_view_name>
-        <name>x_snc_idea_portal_idea_votes</name>
-        <order>200</order>
+        <name>x_snc_idea_portal_vote</name>
+        <order/>
         <override_menu_roles>false</override_menu_roles>
         <query/>
         <report/>
-        <roles>x_snc_idea_portal.idea_votes_user</roles>
+        <roles>x_snc_idea_portal.user</roles>
         <sys_class_name>sys_app_module</sys_class_name>
-        <sys_created_by>sush.chan</sys_created_by>
-        <sys_created_on>2018-01-04 00:04:52</sys_created_on>
+        <sys_created_by>dylan.lindgren</sys_created_by>
+        <sys_created_on>2018-03-09 00:16:49</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>cb17eb3bdb5fcb0094407f6bbf9619a7</sys_id>
-        <sys_mod_count>2</sys_mod_count>
-        <sys_name>Idea Votes</sys_name>
+        <sys_id>5a9f8da04fb01300e5ddc3818110c7e4</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Votes</sys_name>
         <sys_overrides/>
         <sys_package display_value="Idea Portal" source="x_snc_idea_portal">4da17b35db9fc70094407f6bbf961985</sys_package>
         <sys_policy/>
         <sys_scope display_value="Idea Portal">4da17b35db9fc70094407f6bbf961985</sys_scope>
-        <sys_update_name>sys_app_module_cb17eb3bdb5fcb0094407f6bbf9619a7</sys_update_name>
-        <sys_updated_by>sush.chan</sys_updated_by>
-        <sys_updated_on>2018-01-09 22:29:51</sys_updated_on>
+        <sys_update_name>sys_app_module_5a9f8da04fb01300e5ddc3818110c7e4</sys_update_name>
+        <sys_updated_by>dylan.lindgren</sys_updated_by>
+        <sys_updated_on>2018-03-09 00:17:03</sys_updated_on>
         <timeline_page/>
-        <title>Idea Votes</title>
+        <title>Votes</title>
         <uncancelable>false</uncancelable>
         <view_name/>
         <window_name/>

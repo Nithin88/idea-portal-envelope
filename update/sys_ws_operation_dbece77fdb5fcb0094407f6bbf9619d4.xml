@@ -14,7 +14,7 @@
 	var queryParams = request.queryParams; 
 	var ideaSysid = queryParams.idea.toString();
 	var voteObj = {};
-	var voteGr = new GlideRecord('x_snc_idea_portal_idea_votes');
+	var voteGr = new GlideRecord('x_snc_idea_portal_vote');
 		voteGr.addQuery('idea',ideaSysid);
 		voteGr.addQuery('name',gs.getUserID());
 		voteGr.query();
@@ -25,7 +25,7 @@
 		}else{
 			gs.info('ideaSysid not found ');
 			gs.info('ideaSysid '+ideaSysid);
-			voteGlideRec  = new GlideRecord('x_snc_idea_portal_idea_votes');
+			voteGlideRec  = new GlideRecord('x_snc_idea_portal_vote');
 			voteGlideRec.initialize(); 
 			voteGlideRec.name = gs.getUserID(); 
 			voteGlideRec.idea = ideaSysid; 
@@ -47,14 +47,14 @@
         <sys_created_by>sush.chan</sys_created_by>
         <sys_created_on>2018-01-04 00:31:02</sys_created_on>
         <sys_id>dbece77fdb5fcb0094407f6bbf9619d4</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>voteidea</sys_name>
         <sys_package display_value="Idea Portal" source="x_snc_idea_portal">4da17b35db9fc70094407f6bbf961985</sys_package>
         <sys_policy/>
         <sys_scope display_value="Idea Portal">4da17b35db9fc70094407f6bbf961985</sys_scope>
         <sys_update_name>sys_ws_operation_dbece77fdb5fcb0094407f6bbf9619d4</sys_update_name>
-        <sys_updated_by>sush.chan</sys_updated_by>
-        <sys_updated_on>2018-01-04 00:31:02</sys_updated_on>
+        <sys_updated_by>dylan.lindgren</sys_updated_by>
+        <sys_updated_on>2018-03-09 00:20:34</sys_updated_on>
         <web_service_definition display_value="Ideas">a85c2f3fdb5fcb0094407f6bbf9619cb</web_service_definition>
         <web_service_version/>
     </sys_ws_operation>

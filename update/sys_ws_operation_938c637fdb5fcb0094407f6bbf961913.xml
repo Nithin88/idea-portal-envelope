@@ -17,7 +17,7 @@
 	
 	function getVotes(sys_id){
 		var voteObj = {};
-			var voteGr = new GlideRecord('x_snc_idea_portal_idea_votes');
+			var voteGr = new GlideRecord('x_snc_idea_portal_vote');
 			voteGr.addQuery('idea',sys_id);
 			voteGr.addQuery('voted',true);
 			voteGr.query();
@@ -31,13 +31,13 @@
 			return voteObj;
 			
 		}
-		if(typeVal != 'myvotes'){
+		if(typeVal != 'my-votes'){
 			var ideaGr = new GlideRecord('idea');
 			ideaGr.addActiveQuery();
 			if(typeVal == 'all'){
 				ideaGr.addEncodedQuery('opened_byISNOTEMPTY');
 			}
-			if(typeVal == 'my'){
+			if(typeVal == 'my-ideas'){
 				ideaGr.addQuery('opened_by',gs.getUserID());
 			}
 			ideaGr.query();
@@ -55,8 +55,8 @@
 					temp.iVoted = voteObj.voted;
 					ideas.push(temp);
 				}
-			} else{
-				var voteGr = new GlideRecord('x_snc_idea_portal_idea_votes');
+			} else {
+				var voteGr = new GlideRecord('x_snc_idea_portal_vote');
 				voteGr.addQuery('name',gs.getUserID());
 				voteGr.addQuery('voted',true);
 				voteGr.query();
@@ -91,14 +91,14 @@
         <sys_created_by>sush.chan</sys_created_by>
         <sys_created_on>2018-01-04 00:29:47</sys_created_on>
         <sys_id>938c637fdb5fcb0094407f6bbf961913</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>getideas</sys_name>
         <sys_package display_value="Idea Portal" source="x_snc_idea_portal">4da17b35db9fc70094407f6bbf961985</sys_package>
         <sys_policy/>
         <sys_scope display_value="Idea Portal">4da17b35db9fc70094407f6bbf961985</sys_scope>
         <sys_update_name>sys_ws_operation_938c637fdb5fcb0094407f6bbf961913</sys_update_name>
-        <sys_updated_by>sush.chan</sys_updated_by>
-        <sys_updated_on>2018-01-04 00:29:47</sys_updated_on>
+        <sys_updated_by>dylan.lindgren</sys_updated_by>
+        <sys_updated_on>2018-03-09 01:56:51</sys_updated_on>
         <web_service_definition display_value="Ideas">a85c2f3fdb5fcb0094407f6bbf9619cb</web_service_definition>
         <web_service_version/>
     </sys_ws_operation>

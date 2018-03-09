@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_form_sections form_id="b59e05604fb01300e5ddc3818110c740" sys_domain="global" table="idea" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>system</sys_created_by>
+            <sys_created_on>2018-03-09 00:12:25</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>fd9e05604fb01300e5ddc3818110c740</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="idea" name="idea" sys_domain="global" view="Default view">b59e05604fb01300e5ddc3818110c740</sys_ui_form>
+            <sys_ui_section caption="NULL" display_value="" name="idea" sys_domain="global" view="Default view">a7520572d7512100b7490ee60e6103a3</sys_ui_section>
+            <sys_updated_by>system</sys_updated_by>
+            <sys_updated_on>2018-03-09 00:12:25</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>system</sys_created_by>
+            <sys_created_on>2018-03-09 00:12:25</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>799e05604fb01300e5ddc3818110c741</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="idea" name="idea" sys_domain="global" view="Default view">b59e05604fb01300e5ddc3818110c740</sys_ui_form>
+            <sys_ui_section caption="Votes" display_value="Votes" name="idea" sys_domain="global" view="Default view">a228ab7bdb5fcb0094407f6bbf961953</sys_ui_section>
+            <sys_updated_by>system</sys_updated_by>
+            <sys_updated_on>2018-03-09 00:12:25</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>idea</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>system</sys_created_by>
+            <sys_created_on>2018-03-09 00:12:25</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>b59e05604fb01300e5ddc3818110c740</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>idea</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Idea Portal" source="x_snc_idea_portal">4da17b35db9fc70094407f6bbf961985</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Idea Portal">4da17b35db9fc70094407f6bbf961985</sys_scope>
+            <sys_update_name>sys_ui_form_sections_b59e05604fb01300e5ddc3818110c740</sys_update_name>
+            <sys_updated_by>system</sys_updated_by>
+            <sys_updated_on>2018-03-09 00:12:25</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>
