@@ -54,15 +54,15 @@
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>dylan.lindgren</sys_created_by>
         <sys_created_on>2018-03-09 00:16:48</sys_created_on>
-        <sys_id>543f85604fb01300e5ddc3818110c783</sys_id>
+        <sys_id>0afa841ddbf05300b85e8a8b3a96196d</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Idea</sys_name>
         <sys_package display_value="Idea Portal" source="x_snc_idea_portal">4da17b35db9fc70094407f6bbf961985</sys_package>
         <sys_policy/>
         <sys_scope display_value="Idea Portal">4da17b35db9fc70094407f6bbf961985</sys_scope>
         <sys_update_name>sys_dictionary_x_snc_idea_portal_vote_idea</sys_update_name>
-        <sys_updated_by>dylan.lindgren</sys_updated_by>
-        <sys_updated_on>2018-03-09 00:16:48</sys_updated_on>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2018-03-11 03:12:27</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

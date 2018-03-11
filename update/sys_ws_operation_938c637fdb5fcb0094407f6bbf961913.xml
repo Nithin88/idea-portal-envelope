@@ -10,7 +10,7 @@
         <name>getideas</name>
         <operation_script><![CDATA[(function process(request, response) {
 
-    var typeVal = request.queryParams.type,
+    var typeVal = String(request.queryParams.type),
     	ideas = [],
     	voteObj;
 
@@ -61,7 +61,7 @@
         // Loop through the results and build the array.
         while (voteGr.next()) {
 
-        	voteObj = getVotes(voteGr.idea.getValue('sys_id'));
+        	voteObj = getVotes(voteGr.getValue('idea'));
 
             ideas.push({
             	title: voteGr.idea.short_description.getDisplayValue(),
@@ -92,7 +92,7 @@
 
         while (voteGr.next()) {
 
-            if (voteGr.user === gs.getUserID()) {
+            if (voteGr.getValue('user') === gs.getUserID()) {
                 voted = true;
             }
         }
@@ -116,14 +116,14 @@
         <sys_created_by>sush.chan</sys_created_by>
         <sys_created_on>2018-01-04 00:29:47</sys_created_on>
         <sys_id>938c637fdb5fcb0094407f6bbf961913</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name>getideas</sys_name>
         <sys_package display_value="Idea Portal" source="x_snc_idea_portal">4da17b35db9fc70094407f6bbf961985</sys_package>
         <sys_policy/>
         <sys_scope display_value="Idea Portal">4da17b35db9fc70094407f6bbf961985</sys_scope>
         <sys_update_name>sys_ws_operation_938c637fdb5fcb0094407f6bbf961913</sys_update_name>
         <sys_updated_by>dylan.lindgren</sys_updated_by>
-        <sys_updated_on>2018-03-09 04:09:37</sys_updated_on>
+        <sys_updated_on>2018-03-11 03:13:12</sys_updated_on>
         <web_service_definition display_value="Ideas">a85c2f3fdb5fcb0094407f6bbf9619cb</web_service_definition>
         <web_service_version/>
     </sys_ws_operation>
