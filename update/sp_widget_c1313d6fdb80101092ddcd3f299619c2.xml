@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function ideaListCtrl($http, $scope, glideUserSession, spUtil) {
+
+    /* widget controller */
+    var c = this;
+
+    var votesTable = 'x_snc_idea_portal_vote';
+    
+    var tableApiEndpoint = '/api/now/table/' + votesTable;
+    var scriptedApiEndpoint = '/api/x_snc_idea_portal/ideas/';
+
+    c.$onInit = function() {
+        c.getIdeas('all');
+    }
+
+    // Watch for new votes using Record Watcher
+    spUtil.recordWatch($scope, votesTable, '', function(name, data) {
+
+        console.log('Inside Record Watcher: ' + name);
+
+        var ideaSysId = '';
+        var voteValue = name.data.record.voted.value === 'true';
+
+        if (name.data.operation == 'update') {
+
+            $http.get(
+                tableApiEndpoint + '?sysparm_query=sys_id=' + name.data.sys_id,
+                {
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json',
+                        'X-UserToken': window.g_ck
+                    }
+                }).then(function(response) {
+                    ideaSysId = response.data.result[0].idea.value;
+                    c.adjustVotes(ideaSysId, voteValue);
+            });
+        } else {
+            ideaSysId = name.data.record.idea.value;
+            c.adjustVotes(ideaSysId, voteValue);
+        }
+
+    });
+
+    //Method to adjust the vote count associated with each Idea Obj
+    c.adjustVotes = function(ideaSysId, iVoted) {
+        for (var index = 0; index < c.ideas.length; index++) {
+            if (c.ideas[index].sys_id == ideaSysId) {
+                if (iVoted)
+                    ++c.ideas[index].voteCount;
+                else
+                    --c.ideas[index].voteCount;
+            }
+        }
+    };
+
+    // Vote for an idea
+    c.vote = function(idea) {
+        if (idea.openedBySysId != $scope.user.sys_id) {
+            $http.get(scriptedApiEndpoint + 'voteidea?idea=' + idea.sys_id, {
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json',
+                    'X-UserToken': window.g_ck
+                }
+            }).then(function(response) {
+                idea.iVoted = !idea.iVoted;
+            });
+        }
+    };
+
+    // Method to get ideas from the Scripted REST API. Takes type parameter,
+    // which is the types of ideas wanted:
+    //     all = All ideas
+    //     my-ideas = Only ideas which I have submitted
+    //     my-votes = Only ideas which I have voted on
+    c.getIdeas = function(type) {
+        $http.get(scriptedApiEndpoint + 'getideas?type=' + type, {
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+                'X-UserToken': window.g_ck
+            }
+        }).then(function(response) {
+            console.log(response);
+            c.ideas = response.data.result;
+            c.ideas = getCreatedTimeAgo(response.data.result);
+            console.log(c.ideas);
+        });
+    }
+
+    // Using Moment.js to convert the created on date to timeago format
+    function getCreatedTimeAgo(ideas) {
+
+        for (var index = 0; index < ideas.length; index++) {
+
+            var date = ideas[index].createdOnDate;
+            ideas[index].createdOnDate = moment(date).fromNow();
+        }
+
+        return ideas;
+    }
+
+
+    // Event caught based on filter selected in the Idea Sidebar widget
+    $scope.$on('ideaPortal.applyFilter', function(event, data) {
+
+        console.log('Event caught type is: ' + data);
+        c.getIdeas(data);
+    });
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.list-div {
+
+    margin-left: 35px;
+
+    .ideas-list {
+
+        display: flex;
+        padding: 0px 10px 25px 10px;
+        border-bottom: 1px solid #ddd;
+        margin-bottom: 25px;
+
+        .vote {
+
+            width: 70px;
+            text-align: center;
+            color: $brand-primary;
+
+            .vote-wrapper {
+
+                border: 1px solid $brand-primary;
+                font-weight: bold;
+
+                i {
+                    margin: 10px 0px;
+                }
+
+                .count {
+
+                    margin: 0px;
+                    color: $brand-primary;
+                    border-top: 1px solid $brand-primary;
+                    font-size: 18px;
+                    font-weight: 300;
+
+                    &amp;.voted {
+                        background: $brand-primary;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+        .idea-details {
+
+            padding-left: 30px;
+
+            .title {
+                font-size: 24px;
+                font-weight: 300;
+                color: #000;
+            }
+
+            .description {
+                font-size: 17px;
+                color: #000;
+                font-weight: 300;
+            }
+
+            .created {
+
+                display: flex;
+                align-items: center;
+
+                .text {
+                    margin-left: 10px;
+                    margin-bottom: 0px;
+                    font-weight: 300;
+                    font-size: 14px;
+                    color: #908d8d;
+                }
+            }
+        }
+    }
+    .no-data {
+
+        text-align: center;
+
+        .title {
+            font-size: 18px;
+            font-weight: bold;
+        }
+    }
+}
+
+.fa.ng-animate {
+    --webkit-animation: none 0s;
+    animation: none 0s;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>idea_list</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Idea List</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {  /* populate the 'data' object */  /* e.g., data.table = $sp.getValue('table'); */})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>nithin</sys_created_by>
+        <sys_created_on>2020-04-14 12:22:57</sys_created_on>
+        <sys_id>c1313d6fdb80101092ddcd3f299619c2</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Idea List</sys_name>
+        <sys_package display_value="Idea Portal" source="x_snc_idea_portal">4da17b35db9fc70094407f6bbf961985</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Idea Portal">4da17b35db9fc70094407f6bbf961985</sys_scope>
+        <sys_update_name>sp_widget_c1313d6fdb80101092ddcd3f299619c2</sys_update_name>
+        <sys_updated_by>nithin</sys_updated_by>
+        <sys_updated_on>2020-04-14 12:32:18</sys_updated_on>
+        <template><![CDATA[<div class="list-div">
+    <div class="ideas-list" ng-repeat="idea in c.ideas">
+        <div class="vote">
+            <div class="vote-wrapper"
+                 ng-click="c.vote(idea)">
+                <i ng-if="!idea.iVoted"
+                   class="fa fa-2x fa-heart-o animated swing"
+                   aria-hidden="true"></i>
+                <i ng-if="idea.iVoted"
+                   class="fa fa-2x fa-heart animated rubberBand"
+                   aria-hidden="true"></i>
+                <p ng-class="{'voted': idea.iVoted}"
+                   class="count">{{idea.voteCount}}</p>
+            </div>
+        </div>
+        <div class="idea-details">
+            <p class="title">{{idea.title}}</p>
+            <p class="description">{{idea.description}}</p>
+            <div class="created">
+                <sn-avatar class="avatar-small-medium"
+                           show-presence="false"
+                           primary="idea.openedBySysId" />
+                <p class="text">
+                  Created by {{idea.openedByName}} {{idea.createdOnDate}}
+              </p>
+            </div>
+        </div>
+    </div>
+    <div class="no-data" ng-if="c.ideas.length == 0">
+        <p class="title">No ideas found</p>
+    </div>
+</div>]]></template>
+    </sp_widget>
+</record_update>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_page">
+    <sp_page action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <css/>
+        <draft>false</draft>
+        <dynamic_title_structure/>
+        <id>idea_home</id>
+        <internal>false</internal>
+        <public>false</public>
+        <roles/>
+        <short_description/>
+        <sys_class_name>sp_page</sys_class_name>
+        <sys_created_by>nithin</sys_created_by>
+        <sys_created_on>2020-04-14 11:40:47</sys_created_on>
+        <sys_id>e387ade3db40101092ddcd3f2996195c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>idea_home</sys_name>
+        <sys_package display_value="Idea Portal" source="x_snc_idea_portal">4da17b35db9fc70094407f6bbf961985</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Idea Portal">4da17b35db9fc70094407f6bbf961985</sys_scope>
+        <sys_update_name>sp_page_e387ade3db40101092ddcd3f2996195c</sys_update_name>
+        <sys_updated_by>nithin</sys_updated_by>
+        <sys_updated_on>2020-04-14 11:40:47</sys_updated_on>
+        <title>Idea Home</title>
+    </sp_page>
+    <sys_translated_text action="delete_multiple" query="documentkey=e387ade3db40101092ddcd3f2996195c"/>
+</record_update>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="DELETE" field="align_image" table="x_snc_idea_portal_instance_of_banner" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>align_image</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>center</label>
+            <language>en</language>
+            <name>x_snc_idea_portal_instance_of_banner</name>
+            <sequence>100</sequence>
+            <sys_created_by>nithin</sys_created_by>
+            <sys_created_on>2020-04-14 11:05:09</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>156fd9e7db00101092ddcd3f299619c1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>nithin</sys_updated_by>
+            <sys_updated_on>2020-04-14 11:05:09</sys_updated_on>
+            <value>center</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>align_image</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>left</label>
+            <language>en</language>
+            <name>x_snc_idea_portal_instance_of_banner</name>
+            <sequence>200</sequence>
+            <sys_created_by>nithin</sys_created_by>
+            <sys_created_on>2020-04-14 11:05:09</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>556fd9e7db00101092ddcd3f299619c1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>nithin</sys_updated_by>
+            <sys_updated_on>2020-04-14 11:05:09</sys_updated_on>
+            <value>left</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>align_image</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>right</label>
+            <language>en</language>
+            <name>x_snc_idea_portal_instance_of_banner</name>
+            <sequence>300</sequence>
+            <sys_created_by>nithin</sys_created_by>
+            <sys_created_on>2020-04-14 11:05:09</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>956fd9e7db00101092ddcd3f299619c1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>nithin</sys_updated_by>
+            <sys_updated_on>2020-04-14 11:05:09</sys_updated_on>
+            <value>right</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>align_image</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>top</label>
+            <language>en</language>
+            <name>x_snc_idea_portal_instance_of_banner</name>
+            <sequence>400</sequence>
+            <sys_created_by>nithin</sys_created_by>
+            <sys_created_on>2020-04-14 11:05:09</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d56fd9e7db00101092ddcd3f299619c1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>nithin</sys_updated_by>
+            <sys_updated_on>2020-04-14 11:05:09</sys_updated_on>
+            <value>top</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>align_image</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>bottom</label>
+            <language>en</language>
+            <name>x_snc_idea_portal_instance_of_banner</name>
+            <sequence>500</sequence>
+            <sys_created_by>nithin</sys_created_by>
+            <sys_created_on>2020-04-14 11:05:09</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>196fd9e7db00101092ddcd3f299619c1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>nithin</sys_updated_by>
+            <sys_updated_on>2020-04-14 11:05:09</sys_updated_on>
+            <value>bottom</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>align_image</element>
+            <name>x_snc_idea_portal_instance_of_banner</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>nithin</sys_created_by>
+            <sys_created_on>2020-04-14 11:05:09</sys_created_on>
+            <sys_id>1d6fd9e7db00101092ddcd3f299619c1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>align_image</sys_name>
+            <sys_package display_value="Idea Portal" source="x_snc_idea_portal">4da17b35db9fc70094407f6bbf961985</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Idea Portal">4da17b35db9fc70094407f6bbf961985</sys_scope>
+            <sys_update_name>sys_choice_x_snc_idea_portal_instance_of_banner_align_image</sys_update_name>
+            <sys_updated_by>nithin</sys_updated_by>
+            <sys_updated_on>2020-04-14 11:05:09</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Idea Portal">4da17b35db9fc70094407f6bbf961985</application>
+        <file_path/>
+        <instance_id>c8c5fa33db7477802f68c59705961952</instance_id>
+        <instance_name>dev82431</instance_name>
+        <name>sys_choice_x_snc_idea_portal_instance_of_banner_align_image</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_choice action="INSERT_OR_UPDATE" field="align_image" table="x_snc_idea_portal_instance_of_banner" version="3"><sys_choice action="INSERT_OR_UPDATE"><dependent_value/><element>align_image</element><hint/><inactive>false</inactive><label>center</label><language>en</language><name>x_snc_idea_portal_instance_of_banner</name><sequence>100</sequence><sys_created_by>nithin</sys_created_by><sys_created_on>2020-04-14 11:05:09</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>156fd9e7db00101092ddcd3f299619c1</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>nithin</sys_updated_by><sys_updated_on>2020-04-14 11:05:09</sys_updated_on><value>center</value></sys_choice><sys_choice action="INSERT_OR_UPDATE"><dependent_value/><element>align_image</element><hint/><inactive>false</inactive><label>left</label><language>en</language><name>x_snc_idea_portal_instance_of_banner</name><sequence>200</sequence><sys_created_by>nithin</sys_created_by><sys_created_on>2020-04-14 11:05:09</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>556fd9e7db00101092ddcd3f299619c1</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>nithin</sys_updated_by><sys_updated_on>2020-04-14 11:05:09</sys_updated_on><value>left</value></sys_choice><sys_choice action="INSERT_OR_UPDATE"><dependent_value/><element>align_image</element><hint/><inactive>false</inactive><label>right</label><language>en</language><name>x_snc_idea_portal_instance_of_banner</name><sequence>300</sequence><sys_created_by>nithin</sys_created_by><sys_created_on>2020-04-14 11:05:09</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>956fd9e7db00101092ddcd3f299619c1</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>nithin</sys_updated_by><sys_updated_on>2020-04-14 11:05:09</sys_updated_on><value>right</value></sys_choice><sys_choice action="INSERT_OR_UPDATE"><dependent_value/><element>align_image</element><hint/><inactive>false</inactive><label>top</label><language>en</language><name>x_snc_idea_portal_instance_of_banner</name><sequence>400</sequence><sys_created_by>nithin</sys_created_by><sys_created_on>2020-04-14 11:05:09</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>d56fd9e7db00101092ddcd3f299619c1</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>nithin</sys_updated_by><sys_updated_on>2020-04-14 11:05:09</sys_updated_on><value>top</value></sys_choice><sys_choice action="INSERT_OR_UPDATE"><dependent_value/><element>align_image</element><hint/><inactive>false</inactive><label>bottom</label><language>en</language><name>x_snc_idea_portal_instance_of_banner</name><sequence>500</sequence><sys_created_by>nithin</sys_created_by><sys_created_on>2020-04-14 11:05:09</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>196fd9e7db00101092ddcd3f299619c1</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>nithin</sys_updated_by><sys_updated_on>2020-04-14 11:05:09</sys_updated_on><value>bottom</value></sys_choice><sys_choice_set action="INSERT_OR_UPDATE"><element>align_image</element><name>x_snc_idea_portal_instance_of_banner</name><sys_class_name>sys_choice_set</sys_class_name><sys_created_by>nithin</sys_created_by><sys_created_on>2020-04-14 11:05:09</sys_created_on><sys_id>1d6fd9e7db00101092ddcd3f299619c1</sys_id><sys_mod_count>0</sys_mod_count><sys_name>align_image</sys_name><sys_package display_value="Idea Portal" source="x_snc_idea_portal">4da17b35db9fc70094407f6bbf961985</sys_package><sys_policy/><sys_scope display_value="Idea Portal">4da17b35db9fc70094407f6bbf961985</sys_scope><sys_update_name>sys_choice_x_snc_idea_portal_instance_of_banner_align_image</sys_update_name><sys_updated_by>nithin</sys_updated_by><sys_updated_on>2020-04-14 11:05:09</sys_updated_on></sys_choice_set></sys_choice></record_update>]]></payload>
+        <payload_hash>907902506</payload_hash>
+        <record_name>Instance of Banner.Align image</record_name>
+        <reverted_from/>
+        <source>4456f600db22001092ddcd3f29961977</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by/>
+        <sys_created_on>2020-01-20 06:51:58</sys_created_on>
+        <sys_id>3a6f5de7db00101092ddcd3f29961922</sys_id>
+        <sys_mod_count/>
+        <sys_recorded_at>16fc1b8e6b00000000</sys_recorded_at>
+        <sys_updated_by/>
+        <sys_updated_on/>
+        <type>Choice list</type>
+        <update_guid>f66f5de70b00101020b1a11a69523c22</update_guid>
+        <update_guid_history>f66f5de70b00101020b1a11a69523c22:907902506</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>nithin</sys_created_by>
+        <sys_created_on>2020-04-14 11:05:14</sys_created_on>
+        <sys_db_object display_value="" name="sys_choice_set">sys_choice_set</sys_db_object>
+        <sys_id>1d6fd9e7db00101092ddcd3f299619c1</sys_id>
+        <sys_metadata>1d6fd9e7db00101092ddcd3f299619c1</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>align_image</sys_name>
+        <sys_package display_value="Idea Portal" source="x_snc_idea_portal">4da17b35db9fc70094407f6bbf961985</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Idea Portal">4da17b35db9fc70094407f6bbf961985</sys_scope>
+        <sys_scope_delete display_value="">39309de365d547ba9afefd7481b948f1</sys_scope_delete>
+        <sys_update_name>sys_choice_x_snc_idea_portal_instance_of_banner_align_image</sys_update_name>
+        <sys_update_version display_value="sys_choice_x_snc_idea_portal_instance_of_banner_align_image">3a6f5de7db00101092ddcd3f29961922</sys_update_version>
+        <sys_updated_by>nithin</sys_updated_by>
+        <sys_updated_on>2020-04-14 11:05:14</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,10 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update table="sys_app">
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_app">
     <sys_app action="INSERT_OR_UPDATE">
         <active>true</active>
+        <can_edit_in_studio>false</can_edit_in_studio>
         <enforce_license>log</enforce_license>
+        <guided_setup_guid/>
         <js_level>helsinki_es5</js_level>
         <licensable>true</licensable>
+        <license_category/>
         <license_model>none</license_model>
         <logo/>
         <menu display_value="Idea Portal">cc9ace75dbabcf0094407f6bbf96198a</menu>
@@ -38,13 +40,18 @@
         <chunk_size_bytes>734003</chunk_size_bytes>
         <compressed>true</compressed>
         <content_type>image/png</content_type>
+        <encryption_context/>
         <file_name>logo</file_name>
+        <hash/>
         <image_height>148</image_height>
         <image_width>148</image_width>
         <size_bytes>6540</size_bytes>
         <size_compressed>6402</size_compressed>
+        <state/>
         <sys_created_by>dylan.lindgren</sys_created_by>
         <sys_created_on>2018-03-09 01:55:00</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
         <sys_id>241669604ff01300e5ddc3818110c732</sys_id>
         <sys_mod_count>2</sys_mod_count>
         <sys_updated_by>dylan.lindgren</sys_updated_by>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function IdeaSidebarCtrl($location, $scope, $rootScope, $window) {
+
+    /* widget controller */
+    var c = this;
+
+    c.$onInit = function() {
+        c.selectedFilter = 'all';
+    };
+
+    // Will be called by the "Submit an Idea" button to take users
+    // to the page that shows the submit idea record producer.
+    c.submitIdea = function() {
+
+        var PageName = 'idea_create';
+        var RpId = 'df823500dba30f0094407f6bbf961917';
+
+         $location.search({
+             id: PageName,
+             sys_id: RpId
+         });
+        
+        //$window.location.href = '/ideas?id=' + PageName + '&sys_id=' + RpId;
+    };
+
+    // Will be called by the filter links in the sidebar. It will broadcast
+    // an event which will be caught in the Idea List widget.
+    c.applyFilter = function(type) {
+        c.selectedFilter = type;
+        $rootScope.$broadcast('ideaPortal.applyFilter', type);
+        console.log('broadcast fired and type is ' + type);
+    };
+
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.idea-sidebar {
+    padding: 20px 0px;
+    background-color: #F3F2F2;
+    .new-idea {
+        padding: 15px 20px;
+        width: 85%;
+        margin-bottom: 30px;
+        background-color: $brand-primary;
+        color: #fff;
+        display: block;
+        margin-left: auto;
+        font-size: 18px;
+        text-transform: uppercase;
+        margin-right: auto;
+    }
+    .filter-links {
+        color: #303030;
+        display: block;
+        height: 55px;
+        font-size: 18px;
+        font-weight: 300;
+        padding-top: 15px;
+        padding-left: 20px;
+        position: relative;
+        width: 100%;
+        padding-bottom: 15px;
+        &amp;.active {
+            background-color: #E6E5E5;
+            font-weight: normal;
+            &amp;:after {
+                content: '';
+                display: block;
+                position: absolute;
+                left: 100%;
+                top: 50%;
+                margin-top: -27px;
+                width: 0;
+                height: 0;
+                border-top: 27px solid transparent;
+                border-right: 27px solid transparent;
+                border-bottom: 27px solid transparent;
+                border-left: 16px solid#E6E5E5;
+            }
+        }
+    }
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>idea_sidebar</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Idea Sidebar</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {  /* populate the 'data' object */  /* e.g., data.table = $sp.getValue('table'); */})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>nithin</sys_created_by>
+        <sys_created_on>2020-04-14 12:04:49</sys_created_on>
+        <sys_id>630ded27db80101092ddcd3f29961957</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Idea Sidebar</sys_name>
+        <sys_package display_value="Idea Portal" source="x_snc_idea_portal">4da17b35db9fc70094407f6bbf961985</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Idea Portal">4da17b35db9fc70094407f6bbf961985</sys_scope>
+        <sys_update_name>sp_widget_630ded27db80101092ddcd3f29961957</sys_update_name>
+        <sys_updated_by>nithin</sys_updated_by>
+        <sys_updated_on>2020-04-14 12:48:30</sys_updated_on>
+        <template><![CDATA[<div class="idea-sidebar">
+    <button class="new-idea"
+    ng-click="c.submitIdea()">Add an Idea</button>
+    <a class="filter-links" href="javascript:void(0)"
+    ng-class="{'active': c.selectedFilter == 'all'}"
+    ng-click="c.applyFilter('all')">All Ideas</a>
+    <a class="filter-links" href="javascript:void(0)"
+    ng-class="{'active': c.selectedFilter == 'my-ideas'}"
+    ng-click="c.applyFilter('my-ideas')">My Ideas</a>
+    <a class="filter-links" href="javascript:void(0)"
+    ng-class="{'active': c.selectedFilter == 'my-votes'}"
+    ng-click="c.applyFilter('my-votes')">My Votes</a>
+</div>]]></template>
+    </sp_widget>
+</record_update>

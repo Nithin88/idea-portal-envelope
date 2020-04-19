@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update table="db_image">
+<?xml version="1.0" encoding="UTF-8"?><record_update table="db_image">
     <db_image action="INSERT_OR_UPDATE">
         <active>true</active>
         <category>Service Portal</category>
@@ -28,13 +27,18 @@
         <chunk_size_bytes>734003</chunk_size_bytes>
         <compressed>true</compressed>
         <content_type>image/jpeg</content_type>
+        <encryption_context/>
         <file_name>image</file_name>
+        <hash/>
         <image_height>1000</image_height>
         <image_width>1600</image_width>
         <size_bytes>272063</size_bytes>
         <size_compressed>266555</size_compressed>
+        <state/>
         <sys_created_by>sush.chan</sys_created_by>
         <sys_created_on>2018-01-02 23:59:55</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
         <sys_id>706c16e3dbd3cb0094407f6bbf961920</sys_id>
         <sys_mod_count>2</sys_mod_count>
         <sys_updated_by>sush.chan</sys_updated_by>

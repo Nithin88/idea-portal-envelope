@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update>
+<?xml version="1.0" encoding="UTF-8"?><record_update>
     <sys_documentation element="align_image" label="Align image" language="en" table="x_snc_idea_portal_instance_of_banner">
         <sys_documentation action="INSERT_OR_UPDATE">
             <element>align_image</element>
@@ -12,7 +11,7 @@
             <sys_class_name>sys_documentation</sys_class_name>
             <sys_created_by>sush.chan</sys_created_by>
             <sys_created_on>2018-01-09 22:33:55</sys_created_on>
-            <sys_id>61dbc2f5dbabcf0094407f6bbf961984</sys_id>
+            <sys_id>d56fd9e7db00101092ddcd3f299619ab</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>Align image</sys_name>
             <sys_package display_value="Idea Portal" source="x_snc_idea_portal">4da17b35db9fc70094407f6bbf961985</sys_package>

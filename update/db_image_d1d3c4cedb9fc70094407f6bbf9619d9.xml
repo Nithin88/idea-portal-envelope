@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update table="db_image">
+<?xml version="1.0" encoding="UTF-8"?><record_update table="db_image">
     <db_image action="INSERT_OR_UPDATE">
         <active>true</active>
         <category>Service Portal</category>
@@ -28,17 +27,22 @@
         <chunk_size_bytes>734003</chunk_size_bytes>
         <compressed>true</compressed>
         <content_type>image/jpeg</content_type>
+        <encryption_context/>
         <file_name>image</file_name>
+        <hash/>
         <image_height>900</image_height>
         <image_width>1600</image_width>
         <size_bytes>668827</size_bytes>
         <size_compressed>666593</size_compressed>
+        <state>available</state>
         <sys_created_by>sush.chan</sys_created_by>
         <sys_created_on>2017-12-28 21:04:18</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
         <sys_id>a73448cedb9fc70094407f6bbf9619de</sys_id>
-        <sys_mod_count>2</sys_mod_count>
-        <sys_updated_by>sush.chan</sys_updated_by>
-        <sys_updated_on>2017-12-28 21:04:21</sys_updated_on>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_updated_by>guest</sys_updated_by>
+        <sys_updated_on>2020-04-14 11:22:51</sys_updated_on>
         <table_name>ZZ_YYdb_image</table_name>
         <table_sys_id>d1d3c4cedb9fc70094407f6bbf9619d9</table_sys_id>
     </sys_attachment>
